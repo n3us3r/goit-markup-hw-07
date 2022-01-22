@@ -1,0 +1,58 @@
+:root {
+    --main-text-color: #212121;
+    --secondary-text-color: #757575;
+    --icons-color: #AFB1B8;
+    --main-white-color: #FFFFFF;
+    --action-color: #2196F3;
+    --signature-color: rgba(255, 255, 255, 0.6);
+    --footer-bg: #2F303A;
+    --additional-bg: #F5F4FA;
+    --border-line-color: #ECECEC;
+    --secondary-border-line-color: #EEEEEE;
+    --main-choice-color: #188ce8;
+
+    --main-transition-time: 1250ms;
+    --main-transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --portfolio-hover-effect: rgba(33, 150, 243, 0.9);
+}
+
+body {
+    color: var(--main-text-color);
+    background-color: var(--main-white-color);
+
+    font-family: 'Roboto', sans-serif;  
+    letter-spacing: 0.03em;
+}
+
+
+
+
+
+
+
+/* .portfolio__btn-button {
+    background-color: var(--additional-bg);
+    padding: 6px 22px;
+
+    transition: background-color var(--main-transition-time) var(--main-transition-function), color var(--main-transition-time) var(--main-transition-function), box-shadow var(--main-transition-time) var(--main-transition-function);
+} */
+
+/* .footer__subscribe-icon {
+    display: inline;
+} */
+
+/* .footer__subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+
+
+
+/* .footer__subscribe-button:hover,
+.footer__subscribe-button:focus {
+    background-color: var(--main-choice-color);
+} */

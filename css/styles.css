@@ -79,10 +79,9 @@ img {
     align-items: center;
 }
 
-.navigation {
-    display: flex;
-    align-items: center;
-}
+/* =============================================================================
+                                                                    | Блок logo
+============================================================================= */
 
 .logo {
     font-family: 'Raleway', sans-serif;
@@ -102,6 +101,15 @@ img {
 
 .logo--black {
     color: var(--main-text-color);
+}
+
+/* =============================================================================
+                                                                | Блок навигация
+============================================================================= */
+
+.navigation {
+    display: flex;
+    align-items: center;
 }
 
 .navigation__list {
@@ -248,23 +256,26 @@ img {
 }
 
 .btn {
-    min-width: 200px;
-    min-height: 50px;
-
-    font-weight: 700;
     font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-
     cursor: pointer;
-    font-family: inherit;
     border-radius: 4px;
     border: none;
+    font-family: inherit;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn--big {
+    min-width: 200px;
+    min-height: 50px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
 
     background-color: var(--action-color);
     color: var(--main-white-color);
 
     transition: background-color var(--main-transition-time) var(--main-transition-function);
+
 }
 
 .btn:hover,
@@ -276,7 +287,7 @@ img {
                                                             | Наши преимущества
 ============================================================================= */
 
-.benefits {
+.benefits__content {
     padding-top: 107px;
     padding-bottom: 94px;
 }
@@ -289,28 +300,16 @@ img {
     margin-right: 30px;
 }
 
-.benefits__subtitle{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase; 
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.benefits__text {
-    color: var(--secondary-text-color);
-    font-size: 14px;
-    line-height: 1.7;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 /* =============================================================================
-                                                    | Наши преимущества / Иконки
+                                                    | Блок Наши преимущества
 ============================================================================= */
 
-.benefits__icon-box {
+.benefits-card {
+    display: inline-block;
+    width: 270px;
+}
+
+.benefits-card__icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,31 +320,32 @@ img {
     background-color: var(--additional-bg); 
 }
 
-.benefits__icon {
+.benefits-card__icon {
     width: 70px;
     height: 70px;
     fill: currentColor;
 }
 
+.benefits-card__subtitle{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase; 
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.benefits-card__text {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* =============================================================================
-                                                                | Наши работы
+                                                                    | Блок title
 ============================================================================= */
-
-.what-we-do {
-    padding-bottom: 94px;
-}
-
-.what-we-do__list {
-    display: flex;
-}
-
-.what-we-do__item {
-    position: relative;
-}
-
-.what-we-do__item:not(:last-child) {
-    margin-right: 30px;
-}
 
 .title {
     text-align: center;
@@ -355,19 +355,43 @@ img {
     line-height: 1.16;
 }
 
+/* =============================================================================
+                                                                | Наши работы
+============================================================================= */
+
+.what-we-do__content {
+    padding-bottom: 94px;
+}
+
+.what-we-do__list {
+    display: flex;
+}
+
+.what-we-do__item:not(:last-child) {
+    margin-right: 30px;
+}
+
 .what-we-do__title {
     margin-top: 0;
     margin-bottom: 50px;
 }
 
-.what-we-do__overlay {
+/* =============================================================================
+                                                                | Блок activity
+============================================================================= */
+
+.activity {
+    position: relative;
+}
+
+.activity__overlay {
     position: absolute;
     background-color: rgba(47, 48, 58, 0.8);
     bottom: 0;
     overflow: hidden;
 }
 
-.what-we-do__text {
+.activity__text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -386,12 +410,14 @@ img {
     color: var(--main-white-color);
 }
 
-
-                                            /* Наша команда */
+/* =============================================================================
+                                                                | Наша команда
+============================================================================= */
 
 .team {
     background-color: var(--additional-bg);
 }
+
 .team__content {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -414,7 +440,22 @@ img {
     margin-right: 30px;
 }
 
-.team__name {
+/* =============================================================================
+                                                                | Person block
+============================================================================= */
+
+.person {
+    display: inline-block;
+}
+
+.person__meta {
+    padding: 30px 32px;
+
+    text-align: center;
+    background-color: var(--main-white-color);
+}
+
+.person__name {
     margin-top: 0;
     margin-bottom: 10px;
     
@@ -423,7 +464,7 @@ img {
     line-height: 1.18;
 }
 
-.team__position {
+.person__position {
     margin-top: 0;
     margin-bottom: 16px;
 
@@ -433,15 +474,8 @@ img {
     line-height: 1.18;
 }
 
-.team__list-content {
-    padding: 30px 32px;
-
-    text-align: center;
-    background-color: var(--main-white-color);
-}
-
 /* =============================================================================
-                                                    | Social icons / Team & Footer
+                                                | Socials block / Team & Footer
 ============================================================================= */
 
 .socials__list {
@@ -479,15 +513,9 @@ img {
 }
 
 
-
-
-
-
-
-
-
-
-                                            /* Clients */
+/* =============================================================================
+                                                                        | Клиенты
+============================================================================= */
 
 .clients__content {
     padding-top: 94px;
@@ -498,6 +526,7 @@ img {
     margin-top: 0;
     margin-bottom: 50px;
 }
+
 .clients__list {
     display: flex;
 }
@@ -531,10 +560,12 @@ img {
     color: var(--action-color);
 }
 
-                                            /* Portfolio */
+/* =========================================================
+|                                                  Portfolio
+========================================================= */
 
 
-.portfolio {
+.portfolio__content {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -542,25 +573,33 @@ img {
                                                 /* Portfolio buttons */
 
 
-.portfolio-btn-list {
+.portfolio__btn-list {
     display: flex;
     justify-content: center;
     margin-bottom: 34px;
 }
 
-.portfolio-btn-item  {
+.portfolio__btn-item  {
     margin-right: 8px;
     border-radius: 4px;
 }
 
 
-.portfolio-btn-item:nth-last-child(-n + 1) {
+.portfolio__btn-item:nth-last-child(-n + 1) {
     margin-right: 0;
 }
 
-.portfolio-btn-button {
+/* =============================================================================
+|                                                           Портфолио / кнопки
+============================================================================= */
+
+/* .portfolio__btn-button {
     background-color: var(--additional-bg);
 
+    cursor:pointer;
+    border:none;
+    border-radius: 4px;
+    min-height: 38px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -570,9 +609,26 @@ img {
     transition: background-color var(--main-transition-time) var(--main-transition-function), color var(--main-transition-time) var(--main-transition-function), box-shadow var(--main-transition-time) var(--main-transition-function);
 }
 
-.portfolio-btn-button.current,
-.portfolio-btn-button:hover,
-.portfolio-btn-button:focus {
+.portfolio__btn-button--current,
+.portfolio__btn-button:hover,
+.portfolio__btn-button:focus {
+    background-color: var(--action-color);
+    color:var(--main-white-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} */
+
+.btn--small {
+    font-weight: 500;
+    line-height: 1.62;
+    background-color: var(--additional-bg);
+    padding: 6px 22px;
+
+    transition: background-color var(--main-transition-time) var(--main-transition-function), color var(--main-transition-time) var(--main-transition-function), box-shadow var(--main-transition-time) var(--main-transition-function);
+}
+
+.btn--current,
+.btn--small:hover,
+.btn--small:focus {
     background-color: var(--action-color);
     color:var(--main-white-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -622,6 +678,7 @@ img {
     margin: 0;
     font-size: 18px;
     line-height: 1.56;
+
 
     color: var(--main-white-color);
 
@@ -722,8 +779,8 @@ img {
     margin-bottom: 9px;
 }
 
-.footer__address-links:hover,
-.footer__address-links:focus {
+.footer__address-link:hover,
+.footer__address-link:focus {
     color: var(--action-color);
 }
 
@@ -785,6 +842,7 @@ img {
 .footer__subscribe-input {
     width: 358px;
     background-color: transparent;
+    margin-right: 12px; 
     border: 1px solid rgba(255, 255, 255, 0.3);;
     color: rgba(255, 255, 255, 0.6);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -800,32 +858,18 @@ img {
 }
 
 .footer__subscribe-button {
-    margin-left: 12px; 
-
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
-
-
-.footer__subscribe-button:hover,
-.footer__subscribe-button:focus {
-    background-color: var(--main-choice-color);
-}
-
 
 .footer__subscribe-icon {
     margin-left: 10px;
 }
 
-
-
-
-
-
-                            /* Modal window */
+/* =============================================================================
+                                                                    | Backdrop
+============================================================================= */
 
 .backdrop {
     position: absolute;
@@ -846,6 +890,10 @@ img {
     pointer-events: none;
 }
 
+/* =============================================================================
+                                                                | Модальное окно
+============================================================================= */
+
 .modal {
     position: absolute;
     top: 50%;
@@ -859,7 +907,7 @@ img {
     background-color: var(--main-white-color);
 }
 
-.modal-text {
+.modal__text {
     margin-top: 0px;
     margin-bottom: 30px;
 
@@ -870,24 +918,24 @@ img {
     text-align: center;
 }
 
-.modal-form {
+.modal__form {
     display: flex;
     flex-direction: column;
 
     align-items: center;
 }
 
-.modal-form-field {
+.modal__form-field {
     position: relative;
     margin-bottom: 28px;
     display: flex;
 }
 
-.modal-form-field:nth-last-child(-n + 3) {
+.modal__form-field:nth-last-child(-n + 3) {
     margin-bottom: 20px;
 }
 
-.modal-form-input {
+.modal__form-input {
     width: 448px;
     height: 40px;
     padding-left: 42px;
@@ -897,17 +945,7 @@ img {
     transition: border-color var(--main-transition-time) var(--main-transition-function);
 }
 
-.modal-form-icon {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    fill: currentColor;
-
-    transform: translateY(-50%);
-    transition: color var(--main-transition-time) var(--main-transition-function);
-}
-
-.modal-form-label {
+.modal__form-label {
     position: absolute;
     top: 50%;
     left: 42px;
@@ -923,7 +961,21 @@ img {
     transition: transform var(--main-transition-time) var(--main-transition-function);
 }
 
-.modal-form-comment {
+.modal__form-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    fill: currentColor;
+
+    transform: translateY(-50%);
+    transition: color var(--main-transition-time) var(--main-transition-function);
+}
+
+/* =============================================================================
+                                                | Модальное окно / комментарий
+============================================================================= */
+
+.modal__form-comment {
     width: 448px;
     height: 120px;
 
@@ -938,7 +990,7 @@ img {
     transition: border-color var(--main-transition-time) var(--main-transition-function);
 }
 
-.modal-form-comment-label {
+.modal__form-comment-label {
     position: absolute;
     top: -16px;
     left: 0;
@@ -953,15 +1005,17 @@ img {
 }
 
 
-                                            /* Checkbox */
+/* =============================================================================
+                                                    | Модальное окно / checkbox
+============================================================================= */
 
-.modal-form-checkbox,
-.modal-form-license {
+.modal__form-checkbox,
+.modal__form-license {
     font-size: 14px;
     line-height: 1.71;
 }
 
-.modal-form-checkbox {
+.modal__form-checkbox {
     width: 425px;
     margin-bottom: 30px;
     
@@ -969,43 +1023,31 @@ img {
     text-align: right;
 }
 
-.modal-form-checkbox-label {
+.modal__form-checkbox-label {
     color: var(--secondary-text-color);
 }
 
-.modal-form-license {
-    color: var(--action-color);
-}
-
-.modal-form-checkbox-input {
+.modal__form-checkbox-input {
     position: absolute;
     appearance: none;
 }
 
-.modal-form-empty-icon {
+.modal__form-empty-icon,
+.modal__form-checkbox-icon {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     cursor: pointer;
+}
 
+.modal__form-empty-icon {
     fill: currentColor;
 
     transition: color var(--main-transition-time) var(--main-transition-function)
 }
 
-.modal-form-checkbox-input:focus-visible + .modal-form-empty-icon,
-.modal-form-checkbox-input:hover + .modal-form-empty-icon {
-    color: var(--action-color);
-}
-
-
-
-.modal-form-checkbox-icon {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+.modal__form-checkbox-icon {
     opacity: 0;
     border-radius: 2px;
     background-color: var(--action-color);
@@ -1013,67 +1055,36 @@ img {
     transition: opacity var(--main-transition-time) var(--main-transition-function);
 }
 
-
-.modal-form-checkbox-input:checked ~ .modal-form-checkbox-icon {
-    opacity: 1;
+.modal__form-license,
+.modal__form-checkbox-input:focus-visible + .modal__form-empty-icon,
+.modal__form-checkbox-input:hover + .modal__form-empty-icon {
+    color: var(--action-color);
 }
 
-
-
-                                        /* Modal form button */
-
-.modal-form-button {
-    padding: 0;
-    border-radius: 4px;
-    border: none;
-
-    cursor: pointer;
-
-    background-color: var(--action-color);
-    color: var(--main-white-color);
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    
-    min-width: 200px;
-    min-height: 50px;
-    transition: background-color var(--main-transition-time) var(--main-transition-function);
-}
-
-.modal-form-button:hover,
-.modal-form-button:focus {
-    background-color: var(--main-choice-color);
-}
-
-
-.modal-form-field:focus-within .modal-form-icon {
-    color: var(--main-choice-color);
-}
-
-.modal-form-field:focus-within .modal-form-label {
+.modal__form-field:focus-within .modal__form-label,
+.modal__form-input:not(:placeholder-shown) + .modal__form-label {
     transform: translate(-42px, -38px);
 }
 
-.modal-form-input:not(:placeholder-shown) + .modal-form-label {
-    transform: translate(-42px, -38px);
-}
 
-.modal-form-field:focus-within .modal-form-comment-label {
+.modal__form-checkbox-input:checked ~ .modal__form-checkbox-icon,
+.modal__form-field:focus-within .modal__form-comment-label,
+.modal__form-comment:not(:placeholder-shown) + .modal__form-comment-label {
     opacity: 1;
 }
 
-.modal-form-comment:not(:placeholder-shown) + .modal-form-comment-label {
-    opacity: 1;
+.modal__form-field:focus-within .modal__form-icon,
+.modal__form-field:focus-within .modal__form-input,
+.modal__form-field:focus-within .modal__form-comment {
+    border-color: var(--action-color);
 }
 
-.modal-form-field:focus-within .modal-form-input,
-.modal-form-field:focus-within .modal-form-comment {
-    border-color: var(--main-choice-color);
-}
 
-.modal-btn-close {
+/* =============================================================================
+                                            | Модально окно / кнопка закрытия
+============================================================================= */
+
+.modal__close-btn {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -1088,7 +1099,7 @@ img {
     transition: border-color var(--main-transition-time) var(--main-transition-function);
 }
 
-.modal-close-icon {
+.modal__close-icon {
     width: 11px;
     height: 11px;
     fill: currentColor;
@@ -1096,8 +1107,8 @@ img {
     transition: color var(--main-transition-time) var(--main-transition-function);
 }
 
-.modal-btn-close:hover,
-.modal-btn-close:focus {
+.modal__close-btn:hover,
+.modal__close-btn:focus {
     color: var(--action-color);
     border-color: var(--action-color);
 }
