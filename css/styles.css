@@ -11,7 +11,7 @@
     --secondary-border-line-color: #EEEEEE;
     --main-choice-color: #188ce8;
 
-    --main-transition-time: 250ms;
+    --main-transition-time: 1250ms;
     --main-transition-function: cubic-bezier(0.4, 0, 0.2, 1);
     
     --portfolio-hover-effect: rgba(33, 150, 243, 0.9);
@@ -25,7 +25,9 @@ body {
     letter-spacing: 0.03em;
 }
 
-                                                /* Utility */
+/* =============================================================================
+                                                                    | Утилиты
+============================================================================= */
 
 .visually-hidden {
     position: absolute;
@@ -46,7 +48,7 @@ body {
     padding: 0;
 }
 
-.links {
+.link {
     text-decoration: none;
 }
 
@@ -58,66 +60,86 @@ body {
     margin-right: auto;
 }
 
-.header {
-    border-bottom: 1px solid var(--border-line-color);
-}
-
-.btn {
-    cursor: pointer;
-    font-family: inherit;
-    border-radius: 4px;
-    border-style: none;
-}
-
 img {
     display: block;
 }
 
 
-                                /* Шапка */
+/* =============================================================================
+                                                                        | Шапка
+============================================================================= */
 
-.navigation-main,
-.navigation,
-.navigation-list,
-/* .header-contacts-item, */
-.header-contacts-list 
-{
+.header {
+    border-bottom: 1px solid var(--border-line-color);
+    
+}
+
+.header__container {
     display: flex;
     align-items: center;
 }
 
-.navigation-list .item:not(:last-child) {
-    margin-right: 50px;
-}
-
-.header-contacts-list {
-    margin-left: auto;
-}
-
-.header-contacts-list .header-contacts-item:not(:last-child) {
-    margin-right: 48px;
+.navigation {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
-    color: var(--main-text-color);
+    
     line-height: 1.2;
+    display: inline-block;
+    color: var(--action-color);
 }
 
-.header-logo {
+.header__logo {
     margin-right: 86px;
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
-.navigation-link {
+.logo--black {
     color: var(--main-text-color);
-    position: relative;
 }
 
-.navigation-link.current::after {
+.navigation__list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navigation__link {
+    color: var(--main-text-color);
+    position: relative;
+    transition: color var(--main-transition-time) var(--main-transition-function);
+}
+
+.navigation__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.navigation__link--current {
+    color: var(--action-color);
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+    color: var(--action-color);
+}
+
+.navigation__link--current::after {
     content: '';
 
     width: 100%;
@@ -133,12 +155,26 @@ img {
 
 }
 
-.header-contacts-link  {
-    color: var(--secondary-text-color);
+/* =============================================================================
+                                                                        Контакты
+============================================================================= */
+
+.header__contacts-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
-.navigation-link,
-.header-contacts-link {
+.header__contacts-item:not(:last-child) {
+    margin-right: 48px;
+}
+
+.header__contacts-link  {
+    color: var(--secondary-text-color);
+    transition: color var(--main-transition-time) var(--main-transition-function);
+}
+
+.header__contacts-link {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -149,36 +185,27 @@ img {
     letter-spacing: 0.02em;
 }
 
-                                /* Hover effects */
-
-.header-footer-transition {
-    transition: color var(--main-transition-time) var(--main-transition-function);
-}
-
-
-.logo-style,
-.navigation-link:hover,
-.navigation-link:focus,
-.navigation-link.current,
-.footer-address-links:hover,
-.footer-address-links:focus,
-.header-contacts-link:hover,
-.header-contacts-link:focus {
+.header__contacts-link:hover,
+.header__contacts-link:focus {
     color: var(--action-color);
 }
 
-                                /* Icons */
 
-.envelope-icon,
-.phone-icon {
+/* =============================================================================
+                                                                    Иконки шапки
+============================================================================= */
+
+
+.header__envelope-icon,
+.header__phone-icon {
     margin-right: 10px;
     cursor: pointer;
     fill: currentColor;
 }
 
-
-
-                                            /* Герой */
+/* =============================================================================
+                                                                        |  Герой
+============================================================================= */
 
 .hero {
     background-color: var(--footer-bg);
@@ -202,11 +229,12 @@ img {
     background-repeat: no-repeat;
 }
 
-.hero > .container {
+.hero__container {
     width: 696px;
+    margin: 0 auto;
 }
 
-.hero-title {
+.hero__title {
     color: var(--main-white-color);
     margin-top: 0;
     margin-bottom: 30px;
@@ -219,46 +247,49 @@ img {
     text-transform: uppercase;
 }
 
-                                            /* Hero button */
-
-.hero-button {
-    padding: 0;
-    margin: 0;
-
-    background-color: var(--action-color);
-    color: var(--main-white-color);
+.btn {
+    min-width: 200px;
+    min-height: 50px;
 
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-    
-    min-width: 200px;
-    min-height: 50px;
+
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 4px;
+    border: none;
+
+    background-color: var(--action-color);
+    color: var(--main-white-color);
+
     transition: background-color var(--main-transition-time) var(--main-transition-function);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.btn:hover,
+.btn:focus {
     background-color: var(--main-choice-color);
 }
 
-                                          /* Наши преимущества */
+/* =============================================================================
+                                                            | Наши преимущества
+============================================================================= */
 
 .benefits {
     padding-top: 107px;
     padding-bottom: 94px;
 }
 
-.benefits-list {
+.benefits__list {
     display: flex;
 }
 
-.benefits-list .item + .item {
-    margin-left: 30px;
+.benefits__item:not(:last-child) {
+    margin-right: 30px;
 }
 
-.benefits-subtitle{
+.benefits__subtitle{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -267,7 +298,7 @@ img {
     margin-bottom: 10px;
 }
 
-.benefits-text {
+.benefits__text {
     color: var(--secondary-text-color);
     font-size: 14px;
     line-height: 1.7;
@@ -275,9 +306,11 @@ img {
     margin-bottom: 0;
 }
 
-                                        /* Benefits icons */
+/* =============================================================================
+                                                    | Наши преимущества / Иконки
+============================================================================= */
 
-.benefits-icon-box {
+.benefits__icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,48 +321,53 @@ img {
     background-color: var(--additional-bg); 
 }
 
-.benefits-icon {
+.benefits__icon {
     width: 70px;
     height: 70px;
     fill: currentColor;
 }
 
-                                            /* Наши работы */
+/* =============================================================================
+                                                                | Наши работы
+============================================================================= */
 
 .what-we-do {
     padding-bottom: 94px;
 }
 
-.what-we-do-list {
+.what-we-do__list {
     display: flex;
 }
 
-.what-we-do-list .item + .item {
-    margin-left: 30px;
-}
-
-.what-we-do-list .item {
+.what-we-do__item {
     position: relative;
 }
 
-.what-we-do-title {
-    margin-top: 0;
-    margin-bottom: 50px;
+.what-we-do__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.title {
+    text-align: center;
 
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
-    text-align: center;
 }
 
-.what-we-do-overlay {
+.what-we-do__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.what-we-do__overlay {
     position: absolute;
     background-color: rgba(47, 48, 58, 0.8);
     bottom: 0;
     overflow: hidden;
 }
 
-.what-we-do-text {
+.what-we-do__text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -353,34 +391,30 @@ img {
 
 .team {
     background-color: var(--additional-bg);
+}
+.team__content {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.team-title {
+.team__title {
     margin-top: 0;
     margin-bottom: 50px;
-    text-align: center;
-
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
 }
 
-.team-list {
+.team__list {
     display: flex;
 }
 
-.team-list .item + .item {
-    margin-left: 30px;
-}
-
-.team-list > .item {
+.team__item {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.team__item:not(:last-child) {
+    margin-right: 30px;
+}
 
-.team-name {
+.team__name {
     margin-top: 0;
     margin-bottom: 10px;
     
@@ -389,7 +423,7 @@ img {
     line-height: 1.18;
 }
 
-.team-position {
+.team__position {
     margin-top: 0;
     margin-bottom: 16px;
 
@@ -399,68 +433,80 @@ img {
     line-height: 1.18;
 }
 
-.team-list-content {
+.team__list-content {
     padding: 30px 32px;
 
     text-align: center;
     background-color: var(--main-white-color);
 }
 
+/* =============================================================================
+                                                    | Social icons / Team & Footer
+============================================================================= */
 
-                                /* Team socials */
-
-.team-socials-icon-box,
-.clients-list {
+.socials__list {
     display: flex;
 }
 
-.team-socials-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    color: var(--icons-color);
-    transition: background-color var(--main-transition-time) var(--main-transition-function), color var(--main-transition-time) var(--main-transition-function);
-}
-
-.team-socials-item:not(:first-child) {
+.socials__item:not(:first-child) {
     margin-left: 10px;
 }
 
-.team-socials-icon {
+.socials__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: var(--icons-color);
+    
+    cursor: pointer;
+
+    transition: background-color var(--main-transition-time) var(--main-transition-function), color var(--main-transition-time) var(--main-transition-function)
+}
+
+.socials__icon {
     fill: currentColor;
     width: 20px;
     height: 20px;
 }
 
-.team-socials-link:hover, 
-.team-socials-link:focus {
-    background-color: var(--action-color);
+.socials__link:hover,
+.socials__link:focus {
     color: var(--main-white-color);
+    background-color: var(--action-color);
 }
+
+
+
+
+
+
+
+
 
 
                                             /* Clients */
 
-.clients {
+.clients__content {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.clients-title {
+.clients__title {
     margin-top: 0;
     margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
+}
+.clients__list {
+    display: flex;
 }
 
-                            /* Client icons */
+.clients__item:not(:first-child) {
+    margin-left: 30px;
+}
 
-.clients-link {
+.clients__link {
     display: flex;
     width: 170px;
     height: 92px;
@@ -471,21 +517,16 @@ img {
     color: var(--icons-color);
 
     transition: border var(--main-transition-time) var(--main-transition-function), color var(--main-transition-time) var(--main-transition-function);
-
 }
 
-.clients-item:not(:first-child) {
-    margin-left: 30px;
-}
-
-.clients-icon {
+.clients__icon {
     fill: currentColor;
     width: 106px;
     height: 60px;
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
     border-color: var(--action-color);
     color: var(--action-color);
 }
@@ -625,7 +666,9 @@ img {
     line-height: 1.87;
 }
 
-                                    /* Подвал на страницах */
+/* =============================================================================
+                                                                        | Подвал 
+============================================================================= */
 
 .footer {
     background-color: var(--footer-bg);
@@ -633,52 +676,66 @@ img {
     padding-bottom: 60px;
 }
 
-.footer-address {
+.footer__container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.logo--white {
+    color: var(--main-white-color);
+    margin-bottom: 20px;
+}
+
+/* =============================================================================
+                                                                | Подвал / Контакты 
+============================================================================= */
+
+.footer__address {
     font-style: normal;
     width: 231px;
 }
 
-.footer-address-text {
+.footer__address-text {
     color: var(--main-white-color);
     margin-top: 0;
     margin-bottom: 9px;
 }
 
-.footer-address-links {
+.footer__address-link {
     color: var(--signature-color);
     display: inline-block;
+
+    transition: color var(--main-transition-time) var(--main-transition-function);
 }
 
-.footer-address-text,
-.footer-address-links {
+.footer__address-text,
+.footer__address-link {
     font-size: 14px;
     line-height: 1.7;
 }
 
-.footer-address-item:not(:last-child) {
+.footer__address-item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-
-                            /* Footer join */
-
-.footer-logo {
-    display: inline-block;
-    color: var(--main-white-color);
-    margin-bottom: 20px;
+.footer__address-links:hover,
+.footer__address-links:focus {
+    color: var(--action-color);
 }
 
-.footer-container {
-    display: flex;
-    align-items: baseline;
-}
+/* =============================================================================
+                                                    | Подвал / Присоединяйтесь
+============================================================================= */
 
-.footer-join-us {  
+.footer__join-us {  
     margin-left: 70px;
 }
 
-.footer-join-us > .text,
-.footer-subscribe > .text {
+.footer__join-us-text {
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
@@ -690,53 +747,42 @@ img {
     text-transform: uppercase;
 }
 
-.footer-join-us-list {
-    display: flex;
+.footer__subscribe-text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+
+    color: var(--main-white-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
 }
 
-                            /* Icons as inline svg */
-
-.footer-join-us-link {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
+.footer__socials--dark {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-
-    transition: background-color var(--main-transition-time) var(--main-transition-function);
+    color: var(--main-white-color);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-join-us-item:not(:first-child) {
-    margin-left: 10px;
-}
-
-.footer-join-us-icon {
-    fill: var(--main-white-color);
-    width: 20px;
-    height: 20px;
-}
-
-.footer-join-us-link:hover,
-.footer-join-us-link:focus {
+.footer__socials--dark:hover,
+.footer__socials--dark:focus {
     background-color: var(--action-color);
 }
 
-                                 /* Footer subscribe */
+/* =============================================================================
+|                                                        Подвал / Подписывайтесь
+============================================================================= */
 
-.footer-subscribe {
+.footer__subscribe {
     margin-left: auto;
 }
 
-.footer-subscribe-form,
-.footer-subscribe-form .submit {
+.footer__subscribe-form {
     display: flex;
 }
 
-.footer-subscribe-input {
+.footer__subscribe-input {
     width: 358px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);;
@@ -748,46 +794,36 @@ img {
     transition: border-color var(--main-transition-time) var(--main-transition-function);
 }
 
-.footer-subscribe-input:focus,
-.footer-subscribe-input:hover {
+.footer__subscribe-input:focus,
+.footer__subscribe-input:hover {
     border-color: var(--action-color);
 }
 
-
-.footer-subscribe-button {
-    width: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.footer__subscribe-button {
     margin-left: 12px; 
-    background-color: var(--action-color);
 
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-
-    border: none;
-    border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: var(--main-white-color);
-    transition: background-color var(--main-transition-time) var(--main-transition-function);
 }
 
-.footer-subscribe-button:hover,
-.footer-subscribe-button:focus {
+
+
+.footer__subscribe-button:hover,
+.footer__subscribe-button:focus {
     background-color: var(--main-choice-color);
 }
 
 
-.footer-subscribe-icon {
+.footer__subscribe-icon {
     margin-left: 10px;
 }
+
+
+
+
+
 
                             /* Modal window */
 
@@ -963,24 +999,6 @@ img {
     color: var(--action-color);
 }
 
-/* .modal-test {
-    position: absolute;
-    width: 16px;
-    height: 15px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);    
-    cursor: pointer;
-    border: 2px solid black;
-    border-radius: 2px;
-}
-
-
-.modal-form-checkbox-input:focus-visible + .modal-test,
-.modal-form-checkbox-input:hover ~ .modal-test {
-    border-color: var(--action-color);
-} */
-
 
 
 .modal-form-checkbox-icon {
@@ -991,12 +1009,13 @@ img {
     opacity: 0;
     border-radius: 2px;
     background-color: var(--action-color);
+
+    transition: opacity var(--main-transition-time) var(--main-transition-function);
 }
 
 
 .modal-form-checkbox-input:checked ~ .modal-form-checkbox-icon {
     opacity: 1;
-    transition: opacity var(--main-transition-time) var(--main-transition-function);
 }
 
 
