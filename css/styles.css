@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --main-text-color: #212121;
     --secondary-text-color: #757575;
     --icons-color: #AFB1B8;
@@ -15,21 +15,21 @@
     --main-transition-function: cubic-bezier(0.4, 0, 0.2, 1);
     
     --portfolio-hover-effect: rgba(33, 150, 243, 0.9);
-}
+} */
 
-body {
+/* body {
     color: var(--main-text-color);
     background-color: var(--main-white-color);
 
     font-family: 'Roboto', sans-serif;  
     letter-spacing: 0.03em;
-}
+} */
 
 /* =========================================================
 |                                                   Утилиты
 ========================================================= */
 
-.visually-hidden {
+/* .visually-hidden {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -62,13 +62,13 @@ body {
 
 img {
     display: block;
-}
+} */
 
 /* =========================================================
 |                                                   Шапка
 ========================================================= */
 
-.header {
+/* .header {
     border-bottom: 1px solid var(--border-line-color);
     
 }
@@ -76,13 +76,13 @@ img {
 .header__container {
     display: flex;
     align-items: center;
-}
+} */
 
 /* =========================================================
 |                                               Блок logo
 ========================================================= */
 
-.logo {
+/* .logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -103,20 +103,24 @@ img {
     color: var(--main-text-color);
 }
 
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.logo--white {
+    display: inline-block;
+    color: var(--main-white-color);
+} */
+
 /* =========================================================
 |                                          Блок навигация
 ========================================================= */
 
-.navigation,
+/* .navigation,
 .navigation__list {
     display: flex;
     align-items: center;
 }
-
-/* .navigation__list {
-    display: flex;
-    align-items: center;
-} */
 
 .navigation__item:not(:last-child) {
     margin-right: 50px;
@@ -162,13 +166,13 @@ img {
     bottom: 0;
     border-radius: 2px;
 
-}
+} */
 
 /* =========================================================
 |                                                   Контакты
 ========================================================= */
 
-.header__contacts-list {
+/* .header__contacts-list {
     display: flex;
     align-items: center;
     margin-left: auto;
@@ -197,25 +201,25 @@ img {
 .header__contacts-link:hover,
 .header__contacts-link:focus {
     color: var(--action-color);
-}
+} */
 
 /* =========================================================
 |                                               Иконки шапки
 ========================================================= */
 
-.header__envelope-icon,
+/* .header__envelope-icon,
 .header__phone-icon {
     margin-right: 10px;
     cursor: pointer;
     fill: currentColor;
-}
+} */
 
 /* =========================================================
 |                                                      Герой
 ========================================================= */
 
 
-.hero {
+/* .hero {
     background-color: var(--footer-bg);
     text-align: center;
     padding-top: 200px;
@@ -253,25 +257,25 @@ img {
     letter-spacing: 0.06em;
 
     text-transform: uppercase;
-}
+} */
 
 /* =========================================================
 |                                               Блок кнопка
 ========================================================= */
 
-.btn {
+/* .btn {
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
     border: none;
     font-family: inherit;
-}
+} */
 
 /* =========================================================
 |                                       Модификатор кнопки
 ========================================================= */
 
-.btn--big {
+/* .btn--big {
     min-width: 200px;
     min-height: 50px;
     font-weight: 700;
@@ -289,13 +293,13 @@ img {
 .btn--big:hover,
 .btn--big:focus {
     background-color: var(--main-choice-color);
-}
+} */
 
 /* =========================================================
 |                                          Наши преимущества
 ========================================================= */
 
-.benefits__content {
+/* .benefits__content {
     padding-top: 107px;
     padding-bottom: 94px;
 }
@@ -306,13 +310,13 @@ img {
 
 .benefits__item:not(:last-child) {
     margin-right: 30px;
-}
+} */
 
 /* ========================================================
-                                    | Блок Наши преимущества
+|                                   Блок Наши преимущества
 ========================================================= */
 
-.benefits-card {
+/* .benefits-card {
     display: inline-block;
     width: 270px;
 }
@@ -349,25 +353,25 @@ img {
     line-height: 1.7;
     margin-top: 0;
     margin-bottom: 0;
-}
+} */
 
 /* =========================================================
 |                                                 Блок title
 ========================================================= */
 
-.title {
+/* .title {
     text-align: center;
 
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
-}
+} */
 
 /* =========================================================
 |                                               Наши работы
 ========================================================= */
 
-.what-we-do__content {
+/* .what-we-do__content {
     padding-bottom: 94px;
 }
 
@@ -382,13 +386,13 @@ img {
 .what-we-do__title {
     margin-top: 0;
     margin-bottom: 50px;
-}
+} */
 
 /* =========================================================
 |                                              Блок activity
 ========================================================= */
 
-.activity {
+/* .activity {
     position: relative;
 }
 
@@ -416,13 +420,13 @@ img {
     text-transform: uppercase;
 
     color: var(--main-white-color);
-}
+} */
 
 /* =========================================================
 |                                               Наша команда
 ========================================================= */
 
-.team {
+/* .team {
     background-color: var(--additional-bg);
 }
 
@@ -446,7 +450,7 @@ img {
 
 .team__item:not(:last-child) {
     margin-right: 30px;
-}
+} */
 
 
 /* =========================================================
@@ -454,7 +458,7 @@ img {
 ========================================================= */
 
 
-.person {
+/* .person {
     display: inline-block;
 }
 
@@ -482,15 +486,14 @@ img {
 
     font-size: 16px;
     line-height: 1.18;
-}
+} */
 
 
 /* =========================================================
 |                           Блок соцсети / Команда и подвал
 ========================================================= */
 
-
-.socials__list {
+/* .socials__list {
     display: flex;
 }
 
@@ -522,16 +525,14 @@ img {
 .socials__link:focus {
     color: var(--main-white-color);
     background-color: var(--action-color);
-}
-
-
+} */
 
 /* =========================================================
 |                                                   Клиенты
 ========================================================= */
 
 
-.clients__content {
+/* .clients__content {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -572,23 +573,23 @@ img {
 .clients__link:focus {
     border-color: var(--action-color);
     color: var(--action-color);
-}
+} */
 
 /* ========================================================
 |                                                 Портфолио
 ======================================================== */
 
 
-.portfolio__content {
+/* .portfolio__content {
     padding-top: 94px;
     padding-bottom: 94px;
-}
+} */
 
 /* ========================================================
 |                                        Портфолио / кнопки
 ======================================================== */
 
-.portfolio__btn-list {
+/* .portfolio__btn-list {
     display: flex;
     justify-content: center;
     margin-bottom: 34px;
@@ -596,13 +597,13 @@ img {
 
 .portfolio__btn-item:not(:first-child) {
     margin-left: 8px;
-}
+} */
 
 /* =========================================================
 |                               Модификатор кнопки портфолио
 ========================================================= */
 
-.btn--small {
+/* .btn--small {
     font-weight: 500;
     line-height: 1.62;
     background-color: var(--additional-bg);
@@ -616,16 +617,15 @@ img {
 .btn--small:focus {
     background-color: var(--action-color);
     color:var(--main-white-color);
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+} */
 
 /* =========================================================
 |                                       Портфолио / карточки
 ========================================================= */
 
 
-.portfolio__card-list {
+/* .portfolio__card-list {
     display: flex;
     flex-wrap: wrap;
 
@@ -640,13 +640,13 @@ img {
     flex-basis: calc(100% / 3 - 30px);
 
     transition: box-shadow var(--main-transition-time) var(--main-transition-function);
-}
+} */
 
 /* =========================================================
 |                         Портфолио / Блок продукт + Оверлей
 ========================================================= */
 
-.product {
+/* .product {
     display: inline-block;
 }
 
@@ -722,7 +722,7 @@ img {
     
     font-size: 16px;
     line-height: 1.87;
-}
+} */
 
 
 /* =========================================================
@@ -730,7 +730,7 @@ img {
 ========================================================= */
 
 
-.footer {
+/* .footer {
     background-color: var(--footer-bg);
     padding-top: 60px;
     padding-bottom: 60px;
@@ -739,23 +739,14 @@ img {
 .footer__container {
     display: flex;
     align-items: baseline;
-}
-
-.footer__logo {
-    margin-bottom: 20px;
-}
-
-.logo--white {
-    display: inline-block;
-    color: var(--main-white-color);
-}
+} */
 
 /* =========================================================
 |                                          Подвал / Контакты
 ========================================================= */
 
 
-.footer__address {
+/* .footer__address {
     font-style: normal;
     width: 231px;
     font-size: 14px;
@@ -782,13 +773,13 @@ img {
 .footer__address-link:hover,
 .footer__address-link:focus {
     color: var(--action-color);
-}
+} */
 
 /* =========================================================
 |                                   Подвал / Присоединяйтесь
 ========================================================= */
 
-.footer__join-us {  
+/* .footer__join-us {  
     margin-left: 70px;
 }
 
@@ -825,14 +816,14 @@ img {
 .footer__socials--dark:hover,
 .footer__socials--dark:focus {
     background-color: var(--action-color);
-}
+} */
 
 /* =========================================================
 |                                   Подвал / Подписывайтесь
 ========================================================= */
 
 
-.footer__subscribe {
+/* .footer__subscribe {
     margin-left: auto;
 }
 
@@ -866,14 +857,14 @@ img {
 
 .footer__subscribe-icon {
     margin-left: 10px;
-}
+} */
 
 /* =========================================================
 |                                                   Backdrop
 ========================================================= */
 
 
-.backdrop {
+/* .backdrop {
     position: absolute;
     top: 0;
     left: 0;
@@ -890,13 +881,13 @@ img {
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
-}
+} */
 
 /* =========================================================
 |                                           Модальное окно
 ========================================================= */
 
-.modal {
+/* .modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -969,14 +960,14 @@ img {
 
     transform: translateY(-50%);
     transition: color var(--main-transition-time) var(--main-transition-function);
-}
+} */
 
 /* =========================================================
 |                               Модальное окно / комментарий
 ========================================================= */
 
 
-.modal__form-comment {
+/* .modal__form-comment {
     width: 448px;
     height: 120px;
 
@@ -1003,14 +994,14 @@ img {
     color: var(--secondary-text-color);
 
     transition: opacity var(--main-transition-time) var(--main-transition-function);
-}
+} */
 
 /* =========================================================
 |                                  Модальное окно / checkbox
 ========================================================= */
 
 
-.modal__form-checkbox,
+/* .modal__form-checkbox,
 .modal__form-license {
     font-size: 14px;
     line-height: 1.71;
@@ -1078,7 +1069,7 @@ img {
 .modal__form-field:focus-within .modal__form-input,
 .modal__form-field:focus-within .modal__form-comment {
     border-color: var(--action-color);
-}
+} */
 
 
 /* =========================================================
@@ -1086,7 +1077,7 @@ img {
 ========================================================= */
 
 
-.modal__close-btn {
+/* .modal__close-btn {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -1113,4 +1104,4 @@ img {
 .modal__close-btn:focus {
     color: var(--action-color);
     border-color: var(--action-color);
-}
+} */
