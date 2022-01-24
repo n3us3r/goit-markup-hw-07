@@ -433,17 +433,17 @@ img {
   line-height: 1.18;
 }
 
-.socials__list {
+.social__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.socials__item:not(:first-child) {
+.social__item:not(:first-child) {
   margin-left: 10px;
 }
 
-.socials__link {
+.social__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,12 +462,12 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials__link:hover, .socials__link:focus {
+.social__link:hover, .social__link:focus {
   color: #FFFFFF;
   background-color: #2196F3;
 }
 
-.socials__icon {
+.social__icon {
   fill: currentColor;
   width: 20px;
   height: 20px;

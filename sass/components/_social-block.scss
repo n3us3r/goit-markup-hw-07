@@ -1,12 +1,12 @@
-.socials__list {
+.social__list {
     display: flex;
 }
 
-.socials__item:not(:first-child) {
+.social__item:not(:first-child) {
     margin-left: 10px;
 }
 
-.socials__link {
+.social__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -28,7 +28,7 @@
 
 }
 
-.socials__icon {
+.social__icon {
     fill: currentColor;
     width: 20px;
     height: 20px;
