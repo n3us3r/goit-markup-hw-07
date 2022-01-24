@@ -1,12 +1,12 @@
-.social__list {
+.communications__list {
     display: flex;
 }
 
-.social__item:not(:first-child) {
+.communications__item:not(:first-child) {
     margin-left: 10px;
 }
 
-.social__link {
+.communications__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -28,7 +28,7 @@
 
 }
 
-.social__icon {
+.communications__icon {
     fill: currentColor;
     width: 20px;
     height: 20px;
